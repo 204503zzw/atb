@@ -10,10 +10,14 @@ def test_parser():
     parser.add_argument("--train_query_shot", type=int, default=1)
     parser.add_argument("--gpu_num", help="gpu device", type=int, default=1)
     parser.add_argument("--resnet", action="store_true")
-    parser.add_argument("--Model", action="store_true")
     parser.add_argument("--dataset", choices=['cub_cropped',
                                               'stanford_car',
                                               'stanford_dog'])
+    parser.add_argument("--Model", action="store_true")
+    parser.add_argument("--Proto", action="store_true")
+    parser.add_argument("--Group", choices=['E', 'C'])
+    parser.add_argument("--G", type=int)
+    parser.add_argument("--Q", type=int)
 
     args = parser.parse_args()
 
